@@ -47,7 +47,9 @@
         </ul>
         <button class="btn btn-outline-dark position-relative" type="button"
     data-bs-toggle="offcanvas" data-bs-target="#panelCarrito"
-    aria-controls="panelCarrito">
+    aria-controls="panelCarrito"
+    data-bs-title="Ver carrito" data-bs-placement="bottom">
+
 
           <i class="bi bi-bag"></i> Carrito
           <span class="position-absolute top-0 start-100 translate-middle 
@@ -362,7 +364,6 @@
 
 
     <!-- PASO 12: Carrusel de promociones -->
-     <!-- ===== CARRUSEL DE PROMOCIONES ===== -->
 <section class="py-5">
   <div class="container">
     <div id="carruselPromos" class="carousel slide rounded-4 overflow-hidden"
@@ -637,6 +638,12 @@
 </div>
 
 
+<!-- ===== BOTÓN VOLVER ARRIBA ===== -->
+<button type="button" id="btnArriba"
+        class="btn btn-coral rounded-circle shadow position-fixed bottom-0 start-0 m-4
+               d-none" aria-label="Volver arriba" data-bs-title="Volver arriba">
+  <i class="bi bi-arrow-up"></i>
+</button>
 
   <!-- Bootstrap 5.3.8 (JavaScript + Popper) -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"

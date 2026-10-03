@@ -168,3 +168,22 @@ formSuscripcion.addEventListener('submit', (evento) => {
     formSuscripcion.reset();
     formSuscripcion.classList.remove('was-validated');
 });
+
+
+// ===== PASO 16: Tooltips y botón «volver arriba» =====
+
+// 1. Bootstrap no activa los tooltips solo: los creamos aquí
+document.querySelectorAll('[data-bs-title]').forEach((elemento) => {
+  new bootstrap.Tooltip(elemento);
+});
+
+// 2. El botón aparece al bajar 400 px y lleva al inicio con suavidad
+const btnArriba = document.getElementById('btnArriba');
+
+window.addEventListener('scroll', () => {
+  btnArriba.classList.toggle('d-none', window.scrollY < 400);
+});
+
+btnArriba.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
