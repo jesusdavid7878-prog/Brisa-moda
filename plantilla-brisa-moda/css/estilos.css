@@ -68,15 +68,46 @@ body {
     background: linear-gradient(transparent 50%, rgba(0, 0, 0, 0.6));
 }
 
-/* 7. Los enlaces del menú no quedan tapados por la barra fija */
+/* 7. Carrusel de promociones: todas las imágenes con la misma proporción */
+#carruselPromos {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#carruselPromos .carousel-item {
+    height: clamp(260px, 34vw, 440px);
+}
+
+#carruselPromos .carousel-item img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+#carruselPromos .carousel-caption {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5));
+    border-radius: 1rem;
+    inset: auto 10% 1.5rem 10%;
+    padding: 0.75rem 1rem;
+}
+
+/* 8. Los enlaces del menú no quedan tapados por la barra fija */
 section[id] {
     scroll-margin-top: 4.5rem;
 }
 
-/* 8. Menos movimiento para quien lo configure en su equipo */
+/* 9. Menos movimiento para quien lo configure en su equipo */
 @media (prefers-reduced-motion: reduce) {
     .tarjeta-producto,
     .categoria img {
         transition: none;
+    }
+}
+
+@media (max-width: 576px) {
+    #carruselPromos .carousel-item {
+        height: 220px;
     }
 }
